@@ -2,6 +2,7 @@ const input = document.querySelectorAll(".box");
 
 let row=0;
 
+let word="MONEY";
 document.addEventListener("keydown",function handleKeyPress(event){
     const pressed=event.key;
     
@@ -19,11 +20,28 @@ let addLetter=inp =>{
     {
     input[row].innerText=inp;
         row++;
+        current +=inp;
+    }else {
+        // press enter to current="" & row++;
+        input[row-1].innerText=inp;
     }
 }
+
 
 let isLetter=inp =>
 {
     return /^[a-zA-Z]$/.test(inp);
 }
+let ent=inp =>
+{
+    if(current==word)
+    {
+        alert("you win");
+    }else 
+    {
+        // pressed enter but word is not right
+        current="";
+    }
+}
+
 
