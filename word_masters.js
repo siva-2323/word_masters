@@ -1,62 +1,47 @@
 
-let turns=6;
-let letters=document.querySelectorAll(".boxes");
-let a1=document.querySelector(".logo");
+let box=document.querySelectorAll(".box");
+
 
 
 
 // checking valid letters
-let isLetter=(letter)=> {
-    return /^[a-zA-Z]$/.test(letter);
+let isLetter=(input)=> {
+    return /^[a-zA-Z]$/.test(input);
   }
-
-// backspace
-let backspace=(input)=>
-{
-input=input.substring(0,input.length-1);
-letters[row*5+input.length]="";
-}
 
 async function init()
 {
-
-    //fetch
-
-    const random=await fetch("ttps://words.dev-apis.com/word-of-the-day");
-    
-
-
     let row=0;
-    let current="";
-    
+    let currentWord="";
 
-    // adding
-    let addLetter=(input) =>
-    {
-        if (current.length<5){
-            current+=input;
-        }
-    }
+    //fetch the word
 
-    // not typed full boxes
-     function empty (){
-        if(current.length !== 5){
+    const fetchResult=await fetch("https://words.dev-apis.com/word-of-the-day");
+    const obj=await fetchResult.json();
+    let words=obj.word;
+    words=words.toUpperCase();
+    let wordParts=words.split("");
+
+    async function commit (){
+
+        if(currentWord.length !==5){
             return;
         }
+
     }
 
 
-    let guessParts=current.split("");
-    
+    document.addEventListener("keydown",function handleKeyPress(event){
+        const pressed =event.key;
 
-    document.addEventListener("keydown", function handleKeyPress(event) {
-         
-          // do nothing;
-          return;
-        );
-
+        if(pressed =="Enter") commit();
+        else if(pressed="Backspace") backspace();
+        else if(isLetter(pressed)) addLetter(pressed.toUpperCase());
+        
+    });
 
 }
 
-init();
+  init();
+
 

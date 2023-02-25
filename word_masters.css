@@ -8,7 +8,17 @@ body{
     text-align: center;
     border-bottom: 5px solid black;
 }
-.box{
+.spiralBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spiral{
+    font-size: 40px;
+}
+
+
+.boxes{
     width: 500px;
     display: grid;
     row-gap: 5px;
@@ -19,7 +29,7 @@ body{
     margin-top: 10px;
     height: 500px;
 }
-.boxes{
+.box{
     height: 50px;
     width: 50px;
     font-size: 30px;
