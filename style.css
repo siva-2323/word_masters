@@ -1,12 +1,22 @@
 body{
     color: black;
-    background-color: antiquewhite;
 
 }
 .title{
     padding: 20px;
     text-align: center;
-    border-bottom: 5px solid black;
+
+}
+.border{
+    background-color: black;
+    height: 5px;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin-left: 650px;
+    
+
 }
 .spiralBox{
     display: flex;
@@ -19,20 +29,20 @@ body{
 
 
 .boxes{
-    width: 500px;
+    width: 370px;
     display: grid;
-    row-gap: 5px;
-    column-gap: 5px;
+    row-gap: 1px;
+    column-gap: 1px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     background-color: white;
-    margin-left: 650px;
+    margin-left: 730px;
     margin-top: 10px;
-    color: blue;
+    color: black;
     height: 500px;
 }
 .box{
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     font-size: 30px;
     display: flex;
     border: 5px solid #ccc;
