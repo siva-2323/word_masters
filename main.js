@@ -9,10 +9,11 @@ let isLetter=(input)=> {
     return /^[a-zA-Z]$/.test(input);
   }
 
+  box.innerText=5;
 async function init()
 {
     let row=0;
-    let currentWord="";
+    let currentWord="";         //user typing word
 
     //fetch the word
 
@@ -22,12 +23,25 @@ async function init()
     words=words.toUpperCase();
     let wordParts=words.split("");
 
-    async function commit (){
+
+    let addLetter=input =>
+    {
+        if(currentWord.length<5)
+        {
+            currentWord +=input;
+        }else {
+            currentWord=currentWord.substring(0,currentWord.length-1)+input;
+        }
+        box[row*5+currentWord.length-1].innerText=input;
+    }
+
+    async function commit (){               //pressed enter
 
         if(currentWord.length !==5){
             return;
         }
-
+            const inputWord=currentWord.split("");
+            
     }
   
 
