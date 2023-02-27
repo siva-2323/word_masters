@@ -12,26 +12,32 @@ async function fetchWord()
     arrayOfSecretWord=secretWord.split("");
 }
 
-try{
-fetchWord();
+try
+{
+    fetchWord();
 
 
-document.addEventListener("keydown",function handleKeyPress(event){
-    const pressed=event.key;
+    document.addEventListener("keydown",function handleKeyPress(event)
+    {
+        const pressed=event.key;
     
-    if(pressed==="Enter") ent();
-    else if(pressed==="Backspace")backspace();
-    else if(isLetter(pressed)){
-        addLetter(pressed.toUpperCase());
-    }
-});
+        if(pressed==="Enter") ent();
+        else if(pressed==="Backspace")backspace();
+        else if(isLetter(pressed))
+            {
+            addLetter(pressed.toUpperCase());
+            }
+    });
 }
-catch{
+
+catch
+{
     alert("Sorry error occured. Check your internet connection");
 }
 
 currentWord="";
-let addLetter=value =>{
+let addLetter=value =>
+{
 
 
     if(currentWord.length<5)        
@@ -41,7 +47,8 @@ let addLetter=value =>{
 
     boxNumber++;
 
-    }else {
+    }else 
+    {
         
         letters[boxNumber-1].innerText=value;
         currentWord=currentWord.substring(0,currentWord.length-1);
@@ -63,7 +70,8 @@ let ent=value =>
     {
         alert("you win");
         
-    }else if(currentWord.length==5) {   
+    }else if(currentWord.length==5) 
+    {   
             if(numberOfChances==0) alert("you lose");
             numberOfChances--;
             let loop=boxNumber-5;
@@ -80,8 +88,9 @@ let ent=value =>
 
     }
 }
+
 let backspace=value =>
-    {
+{
     if(currentWord.length<1)
     {
         return;
@@ -91,5 +100,5 @@ let backspace=value =>
         letters[boxNumber-1].innerText="";
         if(boxNumber!==0)boxNumber--;
     }
-    }
+}
 
