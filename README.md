@@ -1,6 +1,9 @@
-# JavaScript word_masters project
+# Word Masters Project
 
-- I am going to recreate the well known word game Wordle. If you're not familiar with Wordle (which we'll call Word Masters), here's how you play
+## Project Description
+
+- My project is a word guessing game.
+- I used HTML, CSS, and JavaScript for this project.
 - There is a secret five letter word chosen.
 - Players have six guesses to figure out the secret word.
 - After six guesses, they lose.
@@ -8,6 +11,9 @@
 - If the player guesses the right word, the player wins and the game is over.
 
 
+## How to run the project
+
+- I have attached the hosted link of my project below.
 
 ## Links
 

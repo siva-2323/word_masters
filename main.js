@@ -12,10 +12,10 @@ async function fetchWord()
     arrayOfSecretWord=secretWord.split("");
 }
 
-
+try{
 fetchWord();
 
-try{
+
 document.addEventListener("keydown",function handleKeyPress(event){
     const pressed=event.key;
     
