@@ -12,8 +12,10 @@ async function fetchWord()
     arrayOfSecretWord=secretWord.split("");
 }
 
+
 fetchWord();
 
+try{
 document.addEventListener("keydown",function handleKeyPress(event){
     const pressed=event.key;
     
@@ -23,6 +25,10 @@ document.addEventListener("keydown",function handleKeyPress(event){
         addLetter(pressed.toUpperCase());
     }
 });
+}
+catch{
+    alert("Sorry error occured. Check your internet connection");
+}
 
 currentWord="";
 let addLetter=value =>{
