@@ -15,6 +15,23 @@
 
 - I have attached the hosted link of my project below.
 
+## How to use the project
+
+- You have to guess a five letter word and should type in it.
+- If it is correct you win.
+
+
+## Instruction
+
+- Fork this repository.
+- Clone the forked repository.
+- Add your contributions (code or documentation).
+- Commit and push.
+- Wait for pull request to be merged.
+
+  
+
+
 ## Links
 
 - API link for random words-  https://words.dev-apis.com/word-of-the-day.
